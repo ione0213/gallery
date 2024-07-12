@@ -4,114 +4,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodePen - Full-Screen Responsive Image Slider</title>
+  <title>Full-Screen Responsive Image Slider</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-  <link rel="stylesheet" href="./style.css">
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: "Lexend", sans-serif;
-  background-color: #362a2b;
-  color: #e5ebf3;
-  overflow: hidden;
-}
+    body {
+      font-family: "Lexend", sans-serif;
+      background-color: #362a2b;
+      color: #e5ebf3;
+      overflow: hidden;
+    }
 
-.slider {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
+    .slider {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-  background-size: cover;
-  background-position: center center;
-}
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      background-size: cover;
+      background-position: center center;
+    }
 
-.slide.current {
-  opacity: 1;
-}
+    .slide.current {
+      opacity: 1;
+    }
 
-.slide:first-child {
-  background-image: url("1.jpg");
-}
+    .slide:first-child {
+      background-image: url("1.jpg");
+    }
 
-.slide:nth-child(2) {
-  background-image: url("2.jpg");
-}
+    .slide:nth-child(2) {
+      background-image: url("2.jpg");
+    }
 
-.slide:nth-child(3) {
-  background-image: url("3.jpg");
-}
+    .slide:nth-child(3) {
+      background-image: url("3.jpg");
+    }
 
-.slide:nth-child(4) {
-  background-image: url("4.jpg");
-}
+    .slide:nth-child(4) {
+      background-image: url("4.jpg");
+    }
 
-.slide:nth-child(5) {
-  background-image: url("5.jpg");
-}
+    .slide:nth-child(5) {
+      background-image: url("5.jpg");
+    }
 
-.slide:nth-child(6) {
-  background-image: url("6.jpg");
-}
+    .slide:nth-child(6) {
+      background-image: url("6.jpg");
+    }
 
-.slide:nth-child(7) {
-  background-image: url("7.jpg");
-}
+    .slide:nth-child(7) {
+      background-image: url("7.jpg");
+    }
 
-.slide:nth-child(8) {
-  background-image: url("8.jpg");
-}
+    .slide:nth-child(8) {
+      background-image: url("8.jpg");
+    }
 
-.slide:nth-child(9) {
-  background-image: url("9.jpg");
-}
+    .slide:nth-child(9) {
+      background-image: url("9.jpg");
+    }
 
-.slide:nth-child(10) {
-  background-image: url("10.jpg");
-}
+    .slide:nth-child(10) {
+      background-image: url("10.jpg");
+    }
 
-.slide:nth-child(11) {
-  background-image: url("11.jpg");
-}
+    .slide:nth-child(11) {
+      background-image: url("11.jpg");
+    }
 
-.slide:nth-child(12) {
-  background-image: url("12.jpg");
-}
+    .slide:nth-child(12) {
+      background-image: url("12.jpg");
+    }
 
-@media (min-width: 640px) and (min-height: 640px) {
-  .slide .content {
-    bottom: 70px;
-    left: -600px;
-    width: 600px;
-    padding: 2rem;
-    line-height: 1.6;
-  }
+    @media only screen and (max-width: 640px) {
+      .slider {
+        height: 100vh;
+      }
 
-  .slide .content h1 {
-    font-size: 2rem;
-  }
-
-  .slide.current .content {
-    transform: translateX(600px);
-  }
-}
-</style>
+      .slide {
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -149,7 +141,6 @@ body {
     if (auto) {
       slideInterval = setInterval(nextSlide, intervalTime);
     }
-
   </script>
 </body>
 
